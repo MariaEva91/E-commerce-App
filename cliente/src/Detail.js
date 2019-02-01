@@ -13,14 +13,12 @@ class Detail extends Component {
 
     getProduct() {
         const id = this.props.match.params.id;
-       // console.log(id)
 
         fetch('http://localhost:3001/api/items/' + id)
             .then((res) => {
                 return res.json()
             })
             .then((data) => {
-               // console.log(data)
                 this.setState({
                     productDetail: data,
                     loading: false
@@ -32,7 +30,6 @@ class Detail extends Component {
         this.getProduct();
     }
 
-
     render() {
         if (this.state.loading === true) {
             return <p>Cargando...</p>
@@ -41,9 +38,7 @@ class Detail extends Component {
         let category = this.state.productDetail.categories.map((c, i) => (
             <span key={i}>{c}{i < this.state.productDetail.categories.length -1 ? ' > ' : ' '} </span>
             ))
-      
-        
-
+    
         return (
             <div>
             <Breadcrumb categories={category}></Breadcrumb>
@@ -59,9 +54,7 @@ class Detail extends Component {
                     <span className="price">${parseInt(this.state.productDetail.item.price.amount).toLocaleString(('es-AR'))}</span>
                     <span className="price decimals">{this.state.productDetail.item.price.decimals.padEnd(2,'0')}</span> <br />
                     <button className="button">Comprar</button>
-
                 </div>
-
             </div>
             </div>
 

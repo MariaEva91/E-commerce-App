@@ -8,38 +8,38 @@ body {
   height: 80px;
   background-color: #bc3b6a;
   font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 4%;
+  padding-left: 4%;
 }
 .nav input {
-  width: 900px;
+  width: 100%;
   height: 20px;
-  margin-left: 20%;
-  margin-top: -10px;
-  padding: 3px;
 }
 .nav .logoAda {
   width: 30px;
   height: 30px;
-  margin-top: 15px;
-  margin-left: 15%;
+  padding-right: 10px;
 }
 .nav .boton {
-  height: 30px;
+  height: 27px;
   width: 30px;
-  margin-left: -2px;
 }
 
 .breadcrumb {
   font-size: 20px;
   margin-left: 20%;
   color: #3d3d29;
-  margin-bottom: 5%;
+  padding-bottom: 70px;
 }
 
 .main-container {
   margin-right: 0%;
   background-color: whitesmoke;
   padding: 30px;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 .main-container .list-container {
   background-color: white;
@@ -49,6 +49,7 @@ body {
   margin-left: 20%;
   font-family: "Roboto", sans-serif;
   color: black;
+  margin-top: 20px;
 }
 .main-container .list-container .product {
   border-bottom: groove 1px;
@@ -76,6 +77,21 @@ body {
   margin-right: 20px;
 }
 
+.title-product {
+  font-size: 20px;
+}
+
+.price-product {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.price-decimals-product {
+  font-size: 15px;
+  font-weight: bold;
+  vertical-align: top;
+}
+
 .detail-container {
   width: 1000px;
   height: auto;
@@ -84,6 +100,7 @@ body {
   display: flex;
   padding: 10px;
   font-size: 20px;
+  margin-top: 20px;
 }
 .detail-container .description {
   background-color: white;
@@ -134,6 +151,7 @@ body {
 .decimals {
   font-size: 15px;
   font-weight: bold;
+  vertical-align: top;
 }
 
 .detail-dates {
@@ -144,20 +162,6 @@ body {
 .link {
   text-decoration: none;
   color: black;
-}
-
-.title-product {
-  font-size: 20px;
-}
-
-.price-product {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.price-decimals-product {
-  font-size: 15px;
-  font-weight: bold;
 }
 
 /*# sourceMappingURL=Style.css.map */

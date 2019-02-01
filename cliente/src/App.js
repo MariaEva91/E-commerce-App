@@ -8,7 +8,6 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import Breadcrumb from './Breadcrumb';
 
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +28,7 @@ class App extends Component {
   }
 
   render() {
-    //the html
+   
     return (
       <div className="body">
         <BrowserRouter>

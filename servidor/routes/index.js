@@ -58,14 +58,11 @@ router.get('/api/items/:id', function (req, res, next) {
         .get('https://api.mercadolibre.com/items/' + id + '/description/')
         .then(resultDescription => {
           let descripcion = resultDescription.data;
-        //  console.log(descripcion)
           let category = resultData.category_id;
           axios
             .get('https://api.mercadolibre.com/categories/' + category)
             .then(resultCategory => {
               let categorias = resultCategory.data;
-
-              //el producto
 
             var  Resultado = {
                 item: {

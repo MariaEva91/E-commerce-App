@@ -1,7 +1,6 @@
 body{
     background-color: whitesmoke;
     font-family: 'Roboto', sans-serif;
-    
 }
 
 //the navbar
@@ -10,23 +9,25 @@ body{
     height: 80px;
     background-color: #bc3b6a;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 4%;
+    padding-left: 4%;
     input{
-        width: 900px;
+        width: 100%;
         height: 20px;
-        margin-left: 20%;
-        margin-top: -10px;
-        padding: 3px;
     }
     .logoAda{
         width: 30px;
         height: 30px;
-        margin-top: 15px;
-        margin-left: 15%;
+        padding-right: 10px;
+        
     }
     .boton{
-        height: 30px;
+        height: 27px;
         width: 30px;
-        margin-left: -2px;
+        // margin-left: -2px;
     }
 }
 
@@ -36,8 +37,7 @@ body{
     font-size: 20px;
     margin-left: 20%;
     color: #3d3d29;
-    margin-bottom: 5%;
-    
+    padding-bottom: 70px;
 }
 
 //the list-container
@@ -46,7 +46,8 @@ body{
     margin-right: 0%;
     background-color: whitesmoke;
     padding: 30px;
-    margin-top: 40px;
+    margin-top: 10px;
+
     .list-container{
         background-color: white;
         border-bottom: gray 2px;
@@ -55,6 +56,7 @@ body{
         margin-left: 20%;
         font-family: 'Roboto', sans-serif;
         color: black; 
+        margin-top: 20px;
         .product{
             border-bottom: groove 1px;
             display: flex;
@@ -83,6 +85,19 @@ body{
     }
 }
 }
+.title-product{
+    font-size: 20px;
+    
+}
+.price-product{
+    font-size: 25px;
+    font-weight: bold;
+}
+.price-decimals-product{
+    font-size: 15px;
+ font-weight: bold;
+ vertical-align: top;
+}
 
 //the detail-product
 
@@ -94,6 +109,7 @@ body{
     display: flex;
     padding: 10px;
     font-size: 20px;
+    margin-top: 20px;
     .description{
         background-color: white;
         width: 600px;
@@ -142,6 +158,7 @@ body{
 .decimals{
     font-size: 15px;
     font-weight: bold;
+    vertical-align: top;
 }
 .detail-dates{
     padding: 20px;
@@ -150,16 +167,4 @@ body{
 .link{
     text-decoration: none;
     color: black;
-}
-.title-product{
-    font-size: 20px;
-    
-}
-.price-product{
-    font-size: 25px;
-    font-weight: bold;
-}
-.price-decimals-product{
-    font-size: 15px;
- font-weight: bold;
 }

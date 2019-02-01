@@ -9,9 +9,8 @@ class List extends Component {
     super(props);
 
     this.state = {
-        productos: [],
-        category: []
-      
+      productos: [],
+      category: []
     }
   }
 
@@ -19,18 +18,15 @@ class List extends Component {
     const urlParams = new URLSearchParams(
       window.location.search);
     const s = urlParams.get("search");
-    
 
-    if(this.lastSearch === s) return;
+    if (this.lastSearch === s) return;
     this.lastSearch = s
-   // console.log(s)
-
+    
     fetch('http://localhost:3001/api/items?search=' + s)
       .then((res) => {
         return res.json()
       })
       .then((data) => {
-        console.log(data)
         this.setState({
           productos: data.items,
           category: data.category
@@ -41,33 +37,28 @@ class List extends Component {
   //hooks
   componentDidUpdate() {
     this.getProducts();
-
   }
 
   componentDidMount() {
     this.getProducts();
-
   }
 
   render() {
     let productos = this.state.productos.map((p) => (
       <Link to={'/items/' + p.id} className="link"><Product producto={p}></Product></Link>
-
     )
     )
     let category = this.state.category.map((c, i) => (
-      <span key={i}>{c}{i < this.state.category.length -1 ? ' > ' : ' '}</span>
-
+      <span key={i}>{c}{i < this.state.category.length - 1 ? ' > ' : ' '}</span>
     )
     )
-
 
     return (
       <div>
-      <Breadcrumb categories={category}></Breadcrumb>
-      <div className="list-container">
-        {productos}
-      </div>
+        <Breadcrumb categories={category}></Breadcrumb>
+        <div className="list-container">
+          {productos}
+        </div>
       </div>
 
     );
